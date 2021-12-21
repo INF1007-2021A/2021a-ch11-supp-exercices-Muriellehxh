@@ -104,7 +104,7 @@ class Matrix:
     # TODO: Représentation officielle
     def __repr__(self):
         # TODO: une string qui représente une expression pour construire l'objet.
-        return self
+        return f"Matrix({self.height}, {self.width}, {self.data})"
 
     # !!!
     # TODO: String formatée
@@ -176,3 +176,16 @@ class Matrix:
         for i in range(width):
             result[i, i] = 1.0
         return result
+
+
+foo = Matrix(2, 3, [
+	1.0, 1.0, 1.0,
+	2.0, 2.0, 2.0
+])
+bar = Matrix(2, 3, [
+	0.1, 0.2, 0.3,
+	0.1, 0.2, 0.3
+])
+print(foo + bar)
+print()
+print(foo - bar)
